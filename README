@@ -1,5 +1,5 @@
 # 🧬 Blueprint 01: Automated Storage Cost Optimization for High-Throughput Genomics
-
+### this blueprint is otptimzed strictly for operational cost reduction RUO standard discovery work from high stakes regualtory or clincial data . this is NOT compliant for hosting active human genomic data, HIPAA-regulated datasets, or GxP-validated research workflows.
 ## 💼 The Business Challenge
 Next-Generation Sequencing (NGS) platforms (like the Illumina NovaSeq) generate massive datasets, with a single Whole Genome Sequencing (WGS) run producing over **100 GB of raw FastQ data per sample**. 
 
@@ -48,10 +48,3 @@ The bucket instantiation automatically enforces strict resource-sorting tokens t
 *   **Format:** `[organization]-[environment]-raw-fastq-data`
 *   **Default Tag Output:** `CostCenter = "Lab-Operations"`
 
----
-
-## 📥 Operational Data Recovery Playbook
-When raw files transition to the Glacier tier, they cannot be read instantaneously. Restores must be brokered based on immediate scientific or clinical priority:
-1.  **Expedited (1–5 Minutes):** Utilized for critical, urgent clinical diagnostic pipeline reruns.
-2.  **Standard (3–5 Hours):** Default baseline tier for typical validation loops or auditing queries.
-3.  **Bulk (5–12 Hours):** Zero data retrieval cost; designed for mass legacy cohort re-processing.
